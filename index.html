@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Football Zone | Your Home of Football</title>
+  <meta name="description" content="Explore football legends, players and stories at Football Zone.">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="logo" href="#home">⚽ FOOTBALL<span>ZONE</span></a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#players">Players</a>
+      <a href="#news">News</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR HOME OF FOOTBALL</p>
+        <h1>ONE GAME.<br> MILLIONS OF FANS.</h1>
+        <p>
+          Discover football legends, explore your favourite
+          players and celebrate the beautiful game.
+        </p>
+        <a class="primary-button" href="#players">EXPLORE PLAYERS →</a>
+      </div>
+      <div class="football-art" aria-hidden="true">⚽</div>
+    </section>
+
+    <section class="section" id="players">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE STARS</p>
+          <h2>Football Legends</h2>
+        </div>
+        <span class="count" id="playerCount">4 players</span>
+      </div>
+
+      <label class="search-box">
+        <span>🔎</span>
+        <input
+          id="playerSearch"
+          type="search"
+          placeholder="Search players or countries..."
+          aria-label="Search players or countries"
+        >
+      </label>
+
+      <div class="player-grid" id="playerGrid">
+
+        <article class="player-card" data-search="cristiano ronaldo portugal forward al nassr">
+          <div class="player-art ronaldo-art">CR7</div>
+          <div class="player-info">
+            <span class="tag">PORTUGAL</span>
+            <h3>Cristiano Ronaldo</h3>
+            <p>Forward · Al Nassr</p>
+            <button class="details-button" data-player="Cristiano Ronaldo">
+              Discover player ↗
+            </button>
+          </div>
+        </article>
+
+        <article class="player-card" data-search="lionel messi argentina forward inter miami">
+          <div class="player-art messi-art">LM10</div>
+          <div class="player-info">
+            <span class="tag">ARGENTINA</span>
+            <h3>Lionel Messi</h3>
+            <p>Forward · Inter Miami</p>
+            <button class="details-button" data-player="Lionel Messi">
+              Discover player ↗
+            </button>
+          </div>
+        </article>
+
+        <article class="player-card" data-search="neymar brazil forward santos">
+          <div class="player-art neymar-art">NEY</div>
+          <div class="player-info">
+            <span class="tag">BRAZIL</span>
+            <h3>Neymar Jr.</h3>
+            <p>Forward · Santos</p>
+            <button class="details-button" data-player="Neymar Jr.">
+              Discover player ↗
+            </button>
+          </div>
+        </article>
+
+        <article class="player-card" data-search="kylian mbappe france forward real madrid">
+          <div class="player-art mbappe-art">KM10</div>
+          <div class="player-info">
+            <span class="tag">FRANCE</span>
+            <h3>Kylian Mbappé</h3>
+            <p>Forward · Real Madrid</p>
+            <button class="details-button" data-player="Kylian Mbappé">
+              Discover player ↗
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="empty-message" id="emptyMessage" hidden>
+        No players found. Try another name!
+      </p>
+    </section>
+
+    <section class="news-section" id="news">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FROM THE PITCH</p>
+          <h2>Football Corner</h2>
+        </div>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-icon">🏆</div>
+          <h3>Football History</h3>
+          <p>Explore the legends, trophies and unforgettable moments that shaped football.</p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-icon">🌍</div>
+          <h3>International Football</h3>
+          <p>Discover national teams, international tournaments and football rivalries.</p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-icon">⭐</div>
+          <h3>Player Watch</h3>
+          <p>Learn about famous players, their positions, clubs and playing styles.</p>
+        </article>
+      </div>
+
+      <p class="notice">
+        This is a starter website. The stories above are general topics,
+        not live news or verified current match reports.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#home">⚽ FOOTBALL<span>ZONE</span></a>
+    <p>Made by a football fan, for football fans.</p>
+    <p>© <span id="year"></span> Football Zone</p>
+  </footer>
+
+  <dialog id="playerDialog">
+    <button class="close-button" id="closeDialog" aria-label="Close">✕</button>
+    <p class="eyebrow">PLAYER SPOTLIGHT</p>
+    <h2 id="dialogName">Player name</h2>
+    <p id="dialogText"></p>
+    <button class="primary-button" id="doneButton">LET'S GO ⚽</button>
+  </dialog>
+
+</body>
+</html>
